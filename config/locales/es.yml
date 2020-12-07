@@ -59,6 +59,10 @@ es:
         areas: Sedes
       pedido:
         person: Persona
+      evento:
+        titulo: Título
+        descripcion: Descripción
+        person: Persona
     models:
       departamento:
         zero:  Área
