@@ -12,7 +12,7 @@ group :development, :test do
 end
 
 group :production do
-	gem 'rails_12factor'
+  gem 'rails_12factor'
 end
 
 gem 'jquery-turbolinks'
@@ -68,18 +68,16 @@ gem 'faker'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
-
   gem 'bullet'
+  gem 'rspec'
   gem 'rspec-rails'
   gem 'capybara', '~> 2.15.1'
   gem 'selenium-webdriver'
   gem 'database_cleaner'
+  gem 'factory_bot_rails'
 
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-
-  # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
@@ -87,4 +85,17 @@ group :development, :test do
   # gem 'therubyracer'
   gem 'puma'
 
+  gem 'rubocop', '~> 1.5', require: false # Static code analizer
+  gem 'rubycritic', require: false # Checks for code optimization
+  gem 'rails_best_practices' # Checks for code optimization
+  gem 'traceroute' # Checks for undefined routes and unreachable actions.
+end
+
+group :development do
+  # Access an IRB console on exception pages or by using <%= console %> in views
+  gem 'web-console'
+end
+
+group :test do
+  gem 'simplecov', require: false
 end
