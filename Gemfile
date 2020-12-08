@@ -98,4 +98,5 @@ end
 
 group :test do
   gem 'simplecov', require: false
+  gem "codeclimate-test-reporter"
 end
