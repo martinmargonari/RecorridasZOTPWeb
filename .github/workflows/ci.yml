@@ -47,6 +47,8 @@ jobs:
         # tell Rails to use proper port for MySQL
         DB_PORT: ${{ job.services.mysql.ports[3306] }}
       run: |
+        mkdir /var/run/mysqld
+        ln -s /var/lib/mysql/mysql.sock /var/run/mysqld/mysqld.sock
         gem install bundler --version 1.17.3
         bundle config path vendor/bundle
         bundle install --jobs 4 --retry 3 --path vendor/bundle
