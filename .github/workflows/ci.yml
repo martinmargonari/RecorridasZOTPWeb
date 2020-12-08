@@ -27,7 +27,7 @@ jobs:
           cmd: install
       - name: Build and run tests
         env:
-          DATABASE_URL: mysql://mysql:@localhost:3306/tp_test
+          DATABASE_URL: mysql2://mysql:@localhost:3306/tp_test
           REDIS_URL: redis://localhost:6379/0
           RAILS_ENV: test
         run: |
